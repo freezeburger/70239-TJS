@@ -37,6 +37,7 @@ function MessageBoard() {
 
     const handleSendMessage = (message) => {
         console.log("Message sent:", message);
+        if(message) sendMessage(message);
     };
 
     return (

@@ -59,6 +59,14 @@
       "text": "Pour des performances optimales, utilisez des techniques comme le lazy loading et la virtualisation de liste.",
       "toId": 9,
       "fromId": 10
+    },
+    {
+      "id": "f30d",
+      "text": "Test Message A"
+    },
+    {
+      "id": "cd3b",
+      "text": "Test Message B"
     }
   ],
   "users": [
