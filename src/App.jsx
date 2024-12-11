@@ -4,16 +4,23 @@ import TaskManager from "./components/exercice/TaskManager"
 
 import './logic'
 import MessageBoard from "./MessageBoard/MessageBoard"
+import { BrowserRouter, Route, Routes } from "react-router"
+import TheoryWrapper from "./components/theory/TheoryWrapper"
 
 function App() {
   return (
-    <>
-      <Header/>
-      <MessageBoard/>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<MessageBoard />} />
+        <Route path="/task" element={<TaskManager />} />
+        <Route path="/theory" element={<TheoryWrapper />} />
+      </Routes>
+      {/* <MessageBoard/> */}
       {/* <TaskManager/> */}
       {/* <TheoryWrapper/> */}
-      <Footer/>
-    </>
+      <Footer />
+    </BrowserRouter>
   )
 }
 
