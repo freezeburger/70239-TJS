@@ -1,6 +1,6 @@
 
 import { useEffect } from "react";
-import { useUsersApi } from "../logic";
+import { useMessagesApi, useUsersApi } from "../logic";
 import Inbox from "./Inbox";
 import Messages from "./Messages";
 import Messaging from "./Messaging";
@@ -22,15 +22,18 @@ function MessageBoard() {
     const {users, getAllUsers} = useUsersApi();
     const conversations = users;
 
+    const {messages, getAllMessages, sendMessage} = useMessagesApi();
+
     // Appelle de la fonction une seule fois au chargement du composant
     useEffect(() => {
         getAllUsers()
+        getAllMessages()
     },[])
 
-    const messages = [
+    /* const messages = [
         { type: "incoming", text: "Hello there!", timestamp: "11:01 AM | Today", profileImage: "https://ptetutorials.com/images/user-profile.png" },
         { type: "outgoing", text: "Hi!", timestamp: "11:02 AM | Today" },
-    ];
+    ]; */
 
     const handleSendMessage = (message) => {
         console.log("Message sent:", message);
