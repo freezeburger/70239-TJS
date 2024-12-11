@@ -4,7 +4,7 @@
 function Header() {
 
     return (
-        <header>
+        <header className="navbar bg-primary text-white">
             React Application
         </header>
     )
